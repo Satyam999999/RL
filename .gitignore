@@ -1,0 +1,23 @@
+# Python boilerplate
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+
+# Notebook checkpoints
+.ipynb_checkpoints
+
+# Experiment logs and models
+wandb/
+checkpoints/
+*.pt
+*.pth
+logs/
+
+# IDES
+.vscode/
+.idea/

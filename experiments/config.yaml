@@ -1,0 +1,26 @@
+project_name: "DeepOptions-RL"
+seed: 42
+
+simulation:
+  s0: 100.0
+  k: 100.0
+  t: 1.0
+  r: 0.05
+  sigma: 0.2
+  n_steps: 52       # Keep Weekly Steps
+  n_sims: 100000
+
+agent:
+  gamma: 0.999      # <--- CHANGED: Financially accurate for weekly steps
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.998 # <--- Slower decay (explore longer)
+  learning_rate: 0.0005 
+  batch_size: 64
+  memory_size: 50000
+  target_update: 50 
+
+training:
+  episodes: 3000    # Keep 3000 to ensure convergence
+  log_interval: 10
+  checkpoint_dir: "checkpoints/"
