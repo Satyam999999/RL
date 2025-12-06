@@ -29,9 +29,9 @@ jobs:
         pip install pytest
 
     # 4. Run Unit Tests
-    - name: Run Tests with Pytest
+   - name: Run Tests with Pytest
       run: |
-        pytest tests/
+        python -m pytest tests/
 
     # 5. Build Docker Image (To prove it works)
     - name: Build Docker Image
